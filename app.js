@@ -31,9 +31,9 @@ server.listen(3000, function() {
 });
 
 
-socket.on('user says', function(message){
-          console.log('user says:', + message);
-          io.emot('user says', message); 
+    socket.on('user says', function(message){
+          console.log('user says:', + msg);
+          io.emit('user says', msg); 
           
           });
 
