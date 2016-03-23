@@ -29,3 +29,22 @@ io.on('connection', function (socket) {
 server.listen(3000, function() {
   console.log("server up");
 });
+
+
+socket.on('user says', function(message){
+          console.log('user says:', + message);
+          io.emot('user says', message); 
+          
+          });
+
+
+
+
+
+//socket.on is a different type of event and the server what to do every time the event happens
+
+//socket.on('player lost', Function(end_game){
+//      io.emit('player lost', signal_end_game);
+//} );
+
+
